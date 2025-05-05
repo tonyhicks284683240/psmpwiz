@@ -32,12 +32,12 @@ minimalFolderSize=150 # This is used to make sure download is not corrupted, the
 vaultIniTimeout=60
 
 #filenames (because package is different than actual file) - this goes with every -ivh/Uvh command
-newVersionFile="CARKpsmp-14.1.3.2.x86_64.rpm"                #update this locally
-newIntergratedInfraFile="CARKpsmp-infra-14.1.3.2.x86_64.rpm" #update this locally
+newVersionFile="CARKpsmp-14.4.1.17.x86_64.rpm"                #update this locally
+newIntergratedInfraFile="CARKpsmp-14.4.1.17.x86_64.rpm" #update this locally
 
 #packagenames (this goes with every -qa command)
-newVersion="CARKpsmp-14.1.3-2.x86_64"       #UPDATE this to the latest version always (It's usually diff than the .rpm file we define above, it has dash instead of dot.)
-newVersionSha256="e4a374a0bff796ef3af87d2e5d95709250539dd362347c3e4142cce7942b6bd9" # UPDATE this, example command: sha256sum CARKpsmp-14.1.1.4.x86_64.rpm | awk '{print $1}' 
+newVersion="CARKpsmp-14.4.1.17.x86_64.rpm"       #UPDATE this to the latest version always (It's usually diff than the .rpm file we define above, it has dash instead of dot.)
+newVersionSha256="e4a374a0bff796ef3af87d2e5d95709250539dd362347c3e4142cce7942b6bd9" # UPDATE this, example command: sha256sum CARKpsmp-14.4.1.17.x86_64.rpm | awk '{print $1}' 
 currVersion=$(rpm -qa | grep CARKpsmp-1)     #this grabs only CARKpsmp because of the "-1" (ie 11.05, 12.01, 12.02) to get accurate single package return
 package_to_remove=$(rpm -qa | grep CARKpsmp) #this grabs both CARKpsmp and Infra, to make sure we delete everything.
 
